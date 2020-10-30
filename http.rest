@@ -1,0 +1,21 @@
+@url = https://localhost:5001/api/
+
+###
+
+GET {{url}}users/ 
+
+###
+
+GET {{url}}users/1
+
+###
+
+POST {{url}}users/
+Content-Type: application/json
+
+{
+  "userName": "Cris"
+}
+
+###
+DELETE {{url}}users/6
