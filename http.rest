@@ -1,4 +1,5 @@
 @url = https://localhost:5001/api/
+@token = Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhYmVsZnVidSIsIm5iZiI6MTYwNDE3NDQ2NiwiZXhwIjoxNjA0Nzc5MjY2LCJpYXQiOjE2MDQxNzQ0NjZ9.qAfks-zCOLoB_xMCdZvW1UUgzwVP0ypH176f_t6JYHm9J0XHmNf4_VS4pydH8l1E0JZQBj0oLujOJC_JAp4JBA
 
 ###
 
@@ -6,16 +7,29 @@ GET {{url}}users/
 
 ###
 
-GET {{url}}users/1
+GET {{url}}users/2
+Content-Type: application/json
+Authorization: {{token}}
 
 ###
 
-POST {{url}}users/
+POST {{url}}account/register/
 Content-Type: application/json
 
 {
-  "userName": "Cris"
+  "username": "Fernando",
+  "password": "123"
 }
 
 ###
-DELETE {{url}}users/6
+DELETE {{url}}users/11
+
+###
+
+POST {{url}}account/login
+Content-Type: application/json
+
+{
+  "username": "abelfubu",
+  "password": "123"
+}
