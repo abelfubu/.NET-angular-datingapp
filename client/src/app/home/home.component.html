@@ -1,0 +1,14 @@
+<ng-container *ngIf="!registerMode">
+  <h1>Find your match</h1>
+  <p>Come on in to view your matches... all you need to do is sign up!</p>
+  <div class="action">
+    <button (click)="registerToggle()">Register</button>
+    <button>Learn more</button>
+  </div>
+</ng-container>
+
+<app-register
+  *ngIf="registerMode"
+  (newUserData)="registerUser($event)"
+  (cancelRegister)="registerToggle()"
+></app-register>

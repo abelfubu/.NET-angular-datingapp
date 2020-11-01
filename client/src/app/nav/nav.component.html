@@ -1,0 +1,21 @@
+<div>
+  <h3>Dating app</h3>
+  <div class="actions" *ngIf="accountService.currentUser$ | async">
+    <span>Matches</span>
+    <span>Lists</span>
+    <span>Messages</span>
+  </div>
+</div>
+<form
+  *ngIf="(accountService.currentUser$ | async) === null"
+  #loginForm="ngForm"
+  (ngSubmit)="login(loginForm)"
+  autocomplete="off"
+>
+  <input name="username" ngModel type="text" placeholder="Username" />
+  <input name="password" ngModel type="password" placeholder="Password" />
+  <button>Login</button>
+</form>
+<button *ngIf="accountService.currentUser$ | async" (click)="logout()">
+  Logout
+</button>

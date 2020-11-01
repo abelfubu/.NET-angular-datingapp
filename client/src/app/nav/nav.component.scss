@@ -1,0 +1,21 @@
+:host {
+  background-color: #232323;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 8% 22px;
+
+  .actions {
+    display: inline;
+  }
+
+  span {
+    padding-right: 12px;
+    cursor: pointer;
+  }
+
+  h3 {
+    display: inline;
+    margin-right: 16px;
+  }
+}

@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./theme/variables";
+input {
+  padding: 0 4.2px;
+  border-radius: 3px;
+  height: 32px;
+  border: none;
+  margin-right: 8px;
+}
+
+button {
+  background-color: $citron;
+  color: white;
+  border: none;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: darken($citron, 5);
+  }
+}
+
+.danger {
+  background-color: $rust;
+
+  &:hover {
+    background-color: darken($rust, 5);
+  }
+}

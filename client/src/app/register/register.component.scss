@@ -1,0 +1,14 @@
+:host {
+  display: grid;
+  place-items: center;
+  margin-top: 64px;
+}
+button {
+  margin-right: 8px;
+}
+
+input {
+  border: 0.5px solid #232323;
+  display: block;
+  margin: 16px 0;
+}

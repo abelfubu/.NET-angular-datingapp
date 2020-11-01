@@ -1,0 +1,7 @@
+<form #registerForm="ngForm" autocomplete="off">
+  <h1>Sign Up in</h1>
+  <input type="text" name="username" ngModel placeholder="Username" />
+  <input type="password" name="password" ngModel placeholder="Password" />
+  <button (click)="register(registerForm)">Register</button>
+  <button class="danger" type="button" (click)="cancel()">Cancel</button>
+</form>
