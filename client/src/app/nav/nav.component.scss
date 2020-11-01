@@ -1,3 +1,5 @@
+@import "../../theme/variables";
+
 :host {
   background-color: #232323;
   color: white;
@@ -9,13 +11,28 @@
     display: inline;
   }
 
-  span {
+  span,
+  h3 {
     padding-right: 12px;
     cursor: pointer;
+
+    &:hover {
+      color: lighten($citron, 20);
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 
   h3 {
     display: inline;
     margin-right: 16px;
+    color: lighten($citron, 20);
+  }
+
+  .active {
+    color: $citron;
+    outline: none;
   }
 }

@@ -1,11 +1,12 @@
 <div>
-  <h3>Dating app</h3>
+  <h3 routerLink="/">Dating app</h3>
   <div class="actions" *ngIf="accountService.currentUser$ | async">
-    <span>Matches</span>
-    <span>Lists</span>
-    <span>Messages</span>
+    <span routerLink="/members" routerLinkActive="active">Matches</span>
+    <span routerLink="/lists" routerLinkActive="active">Lists</span>
+    <span routerLink="/messages" routerLinkActive="active">Messages</span>
   </div>
 </div>
+
 <form
   *ngIf="(accountService.currentUser$ | async) === null"
   #loginForm="ngForm"
