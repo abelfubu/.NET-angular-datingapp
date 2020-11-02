@@ -7,7 +7,7 @@ import { ToastrModule } from 'ngx-toastr';
   imports: [
     CommonModule,
     ToastrModule.forRoot({
-      timeOut: 10000,
+      timeOut: 3000,
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
     }),

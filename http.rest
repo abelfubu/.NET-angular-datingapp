@@ -17,8 +17,8 @@ POST {{url}}account/register/
 Content-Type: application/json
 
 {
-  "username": "Fernando",
-  "password": "123"
+  "username": "",
+  "password": "pad"
 }
 
 ###
@@ -33,3 +33,14 @@ Content-Type: application/json
   "username": "abelfubu",
   "password": "123"
 }
+
+
+###
+GET {{url}}buggy/auth/
+
+
+###
+GET {{url}}buggy/bad-request
+
+###
+GET {{url}}buggy/server-error

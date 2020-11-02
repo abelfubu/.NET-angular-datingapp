@@ -20,16 +20,10 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {}
 
   login(formValue: NgForm): void {
-    this.accountService.login(formValue.value).subscribe(
-      () => {
-        formValue.resetForm();
-        this.router.navigateByUrl('/members');
-      },
-      (error) => {
-        console.log(error);
-        this.toastr.error(error.error);
-      }
-    );
+    this.accountService.login(formValue.value).subscribe(() => {
+      formValue.resetForm();
+      this.router.navigateByUrl('/members');
+    });
   }
 
   logout(): void {

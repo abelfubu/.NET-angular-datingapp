@@ -1,0 +1,10 @@
+<ng-container>
+  <button (click)="get500Error()">Test 500 Error</button>
+  <button (click)="get400Error()">Test 400 Error</button>
+  <button (click)="get401Error()">Test 401 Error</button>
+  <button (click)="get404Error()">Test 404 Error</button>
+  <button (click)="get400ValidationError()">Test 400 Validation Error</button>
+  <div *ngIf="validationErrors.length > 0">
+    <p *ngFor="let error of validationErrors">{{ error }}</p>
+  </div>
+</ng-container>
